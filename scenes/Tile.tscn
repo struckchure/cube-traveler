@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv3d3i1cyscv5"]
+
+[ext_resource type="Texture2D" uid="uid://cn8b0qengccfd" path="res://assets/textures/grids/Dark/texture_09.png" id="1_jwl1e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ddlk"]
+albedo_texture = ExtResource("1_jwl1e")
+uv1_scale = Vector3(1.5, 1.5, 1)
+
+[node name="Tile" type="CSGBox3D"]
+transform = Transform3D(7.24978, 0, 0, 0, 0.147995, 0, 0, 0, 4.85147, 0, -0.058257, 0)
+material_override = SubResource("StandardMaterial3D_4ddlk")
+use_collision = true

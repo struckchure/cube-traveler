@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxlqk3rxk3pwg"]
+
+[ext_resource type="Script" path="res://scripts/Terrain.gd" id="1_dqo00"]
+[ext_resource type="PackedScene" uid="uid://bv3d3i1cyscv5" path="res://scenes/Tile.tscn" id="2_ht72y"]
+[ext_resource type="PackedScene" uid="uid://ctc6p2r61m15e" path="res://scenes/Obstacle.tscn" id="3_0wloi"]
+
+[node name="Terrain" type="Node3D"]
+script = ExtResource("1_dqo00")
+tile = ExtResource("2_ht72y")
+obstacle = ExtResource("3_0wloi")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

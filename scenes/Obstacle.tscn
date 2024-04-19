@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctc6p2r61m15e"]
+
+[ext_resource type="Texture2D" uid="uid://2xx5ggsbttae" path="res://assets/textures/grids/Dark/texture_04.png" id="1_ummds"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fdhtw"]
+albedo_texture = ExtResource("1_ummds")
+
+[sub_resource type="BoxMesh" id="BoxMesh_y0npo"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2hndo"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Obstacle" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006809, 0.517042, 0)
+material_override = SubResource("StandardMaterial3D_fdhtw")
+mesh = SubResource("BoxMesh_y0npo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_2hndo")
