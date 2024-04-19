@@ -1,0 +1,5 @@
+res://default_env.tres
+res://scenes/Obstacle.tscn
+res://scripts/Player.gd
+res://scenes/Main.tscn
+res://scripts/Terrain.gd
